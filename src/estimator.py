@@ -2,7 +2,7 @@
 
 def estimator(data):
 
-    {
+    return {
         'data': data,
 
         'impact': {
@@ -16,7 +16,6 @@ def estimator(data):
         }
 
     }
-    return data
 
 
 '''
