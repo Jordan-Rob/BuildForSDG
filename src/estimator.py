@@ -2,17 +2,19 @@
 
 def estimator(data):
 
+    _data = data
+
     return {
-        'data': data,
+        'data': _data,
 
         'impact': {
-            'currentlyInfected': data['reportedCases'] * 10,
-            'infectionsByRequestedTime': (data['reportedCases'] * 10) * (2 ** 19)
+            'currentlyInfected': _data['reportedCases'] * 10,
+            'infectionsByRequestedTime': (_data['reportedCases'] * 10) * (2 ** 19)
         },
 
         'severeImpact': {
-            'currentlyInfected': data['reportedCases'] * 50,
-            'infectionsByRequestedTime': (data['reportedCases'] * 10) * (2 ** 19)
+            'currentlyInfected': _data['reportedCases'] * 50,
+            'infectionsByRequestedTime': (_data['reportedCases'] * 10) * (2 ** 19)
         }
 
     }
