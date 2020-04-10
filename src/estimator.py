@@ -1,19 +1,25 @@
+
+
 def estimator(data):
-    return data
 
+    {
+        'data': data,
 
-def covid19ImpactEstimator(reportedCases):
-    output = {
         'impact': {
-            'currentlyInfected': reportedCases * 10,
-            'infectionsByRequestedTime': (reportedCases * 10) * (2 ** 19)
+            'currentlyInfected': data['reportedCases'] * 10,
+            'infectionsByRequestedTime': (data['reportedCases'] * 10) * (2 ** 19)
         },
 
         'severeImpact': {
-            'currentlyInfected': reportedCases * 50,
-            'infectionsByRequestedTime': (reportedCases * 10) * (2 ** 19)
+            'currentlyInfected': data['reportedCases'] * 50,
+            'infectionsByRequestedTime': (data['reportedCases'] * 10) * (2 ** 19)
         }
 
     }
+    return data
 
-    return output
+
+'''
+cc = {'sa': 4}
+print(cc['sa'])
+'''
