@@ -1,7 +1,9 @@
 
 
 
-input_data = {
+
+def estimator(data):
+    input_data = {
         'region': {
             'name': "Africa",
             'avgAge': 19.7,
@@ -14,9 +16,6 @@ input_data = {
         'population': 66622705,
         'totalHospitalBeds': 1380614
 }
-
-def estimator(**input_data):
-
 
     def convert_2_days():
         if input_data['periodType'] == 'days':
